@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Ogre"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="&quot;$(OGRE_HOME)\include\OGRE&quot;;&quot;$(OGRE_HOME)\include&quot;"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalLibraryDirectories="&quot;$(OGRE_HOME)\lib\$(ConfigurationName)&quot;;&quot;$(OGRE_HOME)\lib\$(ConfigurationName)\opt&quot;"
+	/>
+	<UserMacro
+		Name="OGRE_HOME"
+		Value="D:\dev\ogre1.7.sdk"
+		PerformEnvironmentSet="true"
+	/>
+</VisualStudioPropertySheet>
