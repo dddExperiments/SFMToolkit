@@ -36,3 +36,12 @@ Structure from motion toolkit:
 
 The full package is available at http://www.visual-experiments.com/SFMToolkit/SFMToolkit1.zip (not yet)
 Created by Henri Astre http://www.visual-experiments.com released under MIT license.
+
+Dependencies used:
+------------------
+
+jpeg8b http://www.ijg.org/ created by Thomas G. Lane, Guido Vollbeding
+SiftGPU http://www.cs.unc.edu/~ccwu/siftgpu/ created by Changchang Wu
+TinyXMl http://sourceforge.net/projects/tinyxml/ created by Lee Thomason
+Cexif: http://www.codeproject.com/KB/graphics/cexif.aspx#xx453189xx created by Davide Pizzolato
+Ogre3D: http://www.ogre3d.org/ 
