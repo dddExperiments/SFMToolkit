@@ -31,8 +31,8 @@ Structure from motion toolkit:
 - BundlerViewer : Ogre3D Bundler and PMVS2 output viewer
 
 - BundlerToTracking : generate file to be used for AR tracking [beta]
-- BundlerToPly : generate ply from Bundler output (indexes of 3D points are store in normals) [beta]
+- BundlerToPly : generate ply file from Bundler output (indexes of 3D points are store in normals) [beta]
 - BundlerCleaner : removed 3D points from the tracking file according to ply file [beta]
 
-The full package is available at http://www.visual-experiments.com/SFMToolkit/SFMToolkit1.zip
-Created by Henri Astre http://www.visual-experiments.com released under MIT license.s
+The full package is available at http://www.visual-experiments.com/SFMToolkit/SFMToolkit1.zip (not yet)
+Created by Henri Astre http://www.visual-experiments.com released under MIT license.
