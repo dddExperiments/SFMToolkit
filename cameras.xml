@@ -1,0 +1,276 @@
+<? xml version="1.0" ?>
+<cameras>
+<camera model="Apple iPhone 4"       ccdWidth="4.54" /> <!-- 1/3.2 -->
+<camera model="Asahi Optical Co.,Ltd.  PENTAX Optio330RS" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon DIGITAL IXUS 400"     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon DIGITAL IXUS 40"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS 430"     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon DIGITAL IXUS 500"     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon DIGITAL IXUS 50"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS 55"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS 60"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS 65"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS 700"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon DIGITAL IXUS 750"     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon DIGITAL IXUS 800 IS"  ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS II"      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon EOS 10D"              ccdWidth="22.7" />
+<camera model="Canon Canon EOS-1D Mark II"       ccdWidth="28.7" />
+<camera model="Canon Canon EOS-1Ds Mark II"      ccdWidth="35.95" />
+<camera model="Canon Canon EOS  20D"              ccdWidth="22.5" />
+<camera model="Canon Canon EOS 20D"              ccdWidth="22.5" />
+<camera model="Canon Canon EOS 300D DIGITAL"     ccdWidth="22.66" />
+<camera model="Canon Canon EOS 30D"              ccdWidth="22.5" />
+<camera model="Canon Canon EOS 350D DIGITAL"     ccdWidth="22.2" />
+<camera model="Canon Canon EOS 400D DIGITAL"     ccdWidth="22.2" />
+<camera model="Canon Canon EOS 40D"              ccdWidth="22.2" />
+<camera model="Canon Canon EOS 5D"               ccdWidth="35.8" />
+<camera model="Canon Canon EOS DIGITAL REBEL"     ccdWidth="22.66" />
+<camera model="Canon Canon EOS DIGITAL REBEL XT"  ccdWidth="22.2" />
+<camera model="Canon Canon EOS DIGITAL REBEL XTi" ccdWidth="22.2" />
+<camera model="Canon Canon EOS Kiss Digital"     ccdWidth="22.66" />
+<camera model="Canon Canon IXY DIGITAL 600"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot A10"        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot A20"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot A400"       ccdWidth="4.54" /> <!-- 1/3.2 -->
+<camera model="Canon Canon PowerShot A40"        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot A510"       ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot A520"       ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot A530"       ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot A60"        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot A620"       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot A630"       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot A640"       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot A700"       ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot A70"        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot A710 IS"    ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot A75"        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot A80"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot A85"        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot A95"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G1"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G2"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G3"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G5"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G6"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G7"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot G9"         ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="Canon Canon PowerShot Pro1"       ccdWidth="8.8" /> <!-- 2/3 -->
+<camera model="Canon Canon PowerShot S110"       ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot S1 IS"      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot S200"       ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot S2 IS"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot S30"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S3 IS"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot S400"       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S40"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S410"       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S45"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S500"       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S50"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S60"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S70"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot S80"        ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot SD1000"     ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD100"      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot SD10"       ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD110"      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Canon Canon PowerShot SD200"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD300"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD400"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD450"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD500"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot SD550"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Canon Canon PowerShot SD600"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD630"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD700 IS"   ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD750"      ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Canon Canon PowerShot SD800 IS"   ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon EOS 300D DIGITAL"            ccdWidth="22.66" />
+<camera model="Canon EOS DIGITAL REBEL"          ccdWidth="22.66" />
+<camera model="Canon PowerShot A510"             ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon PowerShot S30"              ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="CASIO COMPUTER CO.,LTD. EX-S500"  ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="CASIO COMPUTER CO.,LTD. EX-Z1000" ccdWidth="7.716" /> <!-- 1/1.8 -->
+<camera model="CASIO COMPUTER CO.,LTD  EX-Z30"  ccdWidth="5.76" /> <!-- 1/2.5  -->
+<camera model="CASIO COMPUTER CO.,LTD. EX-Z600"  ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="CASIO COMPUTER CO.,LTD. EX-Z60" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="CASIO COMPUTER CO.,LTD  EX-Z750"     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="CASIO COMPUTER CO.,LTD. EX-Z850" ccdWidth="7.176" />
+<camera model="EASTMAN KODAK COMPANY KODAK CX7330 ZOOM DIGITAL CAMERA" ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="EASTMAN KODAK COMPANY KODAK CX7530 ZOOM DIGITAL CAMERA" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="EASTMAN KODAK COMPANY KODAK DX3900 ZOOM DIGITAL CAMERA" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="EASTMAN KODAK COMPANY KODAK DX4900 ZOOM DIGITAL CAMERA" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="EASTMAN KODAK COMPANY KODAK DX6340 ZOOM DIGITAL CAMERA" ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="EASTMAN KODAK COMPANY KODAK DX6490 ZOOM DIGITAL CAMERA" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="EASTMAN KODAK COMPANY KODAK DX7630 ZOOM DIGITAL CAMERA" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="EASTMAN KODAK COMPANY KODAK Z650 ZOOM DIGITAL CAMERA" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="EASTMAN KODAK COMPANY KODAK Z700 ZOOM DIGITAL CAMERA" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="EASTMAN KODAK COMPANY KODAK Z740 ZOOM DIGITAL CAMERA" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="EASTMAN KODAK COMPANY KODAK Z740 ZOOM DIGITAL CAMERA" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="FUJIFILM FinePix2600Zoom"         ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="FUJIFILM FinePix40i"                 ccdWidth="7.600" /> <!-- 1/1.7" -->
+<camera model="FUJIFILM FinePix A310"          ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="FUJIFILM FinePix A330"         ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="FUJIFILM FinePix A600"         ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="FUJIFILM FinePix E500"            ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="FUJIFILM FinePix E510"            ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="FUJIFILM FinePix E550"            ccdWidth="7.600" /> <!-- 1/1.7" -->
+<camera model="FUJIFILM FinePix E900"            ccdWidth="7.78" /> <!-- 1/1.6 -->
+<camera model="FUJIFILM FinePix F10"         ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="FUJIFILM FinePix F30"         ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="FUJIFILM FinePix F450"            ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="FUJIFILM FinePix F601 ZOOM"       ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="FUJIFILM FinePix S3Pro"         ccdWidth="23.0" />
+<camera model="FUJIFILM FinePix S5000"          ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="FUJIFILM FinePix S5200"          ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="FUJIFILM FinePix S5500"         ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="FUJIFILM FinePix S6500fd"         ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="FUJIFILM FinePix S7000"          ccdWidth="7.600" /> <!-- 1/1.7 -->
+<camera model="FUJIFILM FinePix Z2"              ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Hewlett-Packard hp 635 Digital Camera" ccdWidth="4.54" /> <!-- 1/3.2 -->
+<camera model="Hewlett-Packard hp PhotoSmart 43x series" ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Hewlett-Packard HP PhotoSmart 618 (V1.1)" ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Hewlett-Packard HP PhotoSmart C945 (V01.61)" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Hewlett-Packard HP PhotoSmart R707 (V01.00)" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="KONICA MILOLTA  DYNAX 5D"          ccdWidth="23.5" />
+<camera model="Konica Minolta Camera, Inc. DiMAGE A2" ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="KONICA MINOLTA CAMERA, Inc. DiMAGE G400" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Konica Minolta Camera, Inc. DiMAGE Z2" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="KONICA MINOLTA DiMAGE A200"       ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="KONICA MINOLTA DiMAGE X1"         ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="KONICA MINOLTA  DYNAX 5D"          ccdWidth="23.5" />
+<camera model="Minolta Co., Ltd. DiMAGE F100"    ccdWidth="7.176" /> <!-- 1/2.7 -->
+<camera model="Minolta Co., Ltd. DiMAGE Xi"      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Minolta Co., Ltd. DiMAGE Xt"      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Minolta Co., Ltd. DiMAGE Z1" ccdWidth="5.27" /> <!-- 1/2.7" -->
+<camera model="NIKON COOLPIX L3"                 ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="NIKON COOLPIX P1"                 ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON COOLPIX P2"                 ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON COOLPIX S4"                 ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="NIKON COOLPIX S7c"                ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="NIKON CORPORATION NIKON D100"     ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D1"       ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D1H"      ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D200"     ccdWidth="23.6" />
+<camera model="NIKON CORPORATION NIKON D2H"      ccdWidth="23.3" />
+<camera model="NIKON CORPORATION NIKON D2X"      ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D40"      ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D50"      ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D60"      ccdWidth="23.6" />
+<camera model="NIKON CORPORATION NIKON D70"      ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D70s"     ccdWidth="23.7" />
+<camera model="NIKON CORPORATION NIKON D80"      ccdWidth="23.6" />
+<camera model="NIKON E2500"                      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="NIKON E2500"                      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="NIKON E3100"                      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="NIKON E3200"                      ccdWidth="5.27" />
+<camera model="NIKON E3700"                      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="NIKON E4200"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E4300"                      ccdWidth="7.18" />
+<camera model="NIKON E4500"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E4600"                      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="NIKON E5000"                      ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="NIKON E5200"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E5400"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E5600"                      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="NIKON E5700"                      ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="NIKON E5900"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E7600"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E775"                       ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="NIKON E7900"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E7900"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E8800"                      ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="NIKON E990"                       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON E995"                       ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="NIKON S1"                       ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Nokia N80"                        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Nokia N80"                        ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Nokia N93"                        ccdWidth="4.536" /> <!-- 1/3.1 -->
+<camera model="Nokia N95"                        ccdWidth="5.7" /> <!-- 1/2.7 -->
+<camera model="OLYMPUS CORPORATION     C-5000Z"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="OLYMPUS CORPORATION C5060WZ"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="OLYMPUS CORPORATION C750UZ"       ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="OLYMPUS CORPORATION C765UZ"       ccdWidth="5.76" /> <!-- 1//2.5 -->
+<camera model="OLYMPUS CORPORATION C8080WZ"      ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="OLYMPUS CORPORATION X250,D560Z,C350Z" ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="OLYMPUS CORPORATION     X-3,C-60Z" ccdWidth="7.176" /> <!-- 1.8 -->
+<camera model="OLYMPUS CORPORATION X400,D580Z,C460Z" ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="OLYMPUS IMAGING CORP.   E-500" ccdWidth="17.3" /> <!-- 4/3 -->
+<camera model="OLYMPUS IMAGING CORP.   FE115,X715" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="OLYMPUS IMAGING CORP. SP310"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="OLYMPUS IMAGING CORP.   SP510UZ"  ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="OLYMPUS IMAGING CORP.   SP550UZ" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="OLYMPUS IMAGING CORP.   uD600,S600" ccdWidth="5.75" /> <!-- 1/2.5" -->
+<camera model="OLYMPUS_IMAGING_CORP.   X450,D535Z,C370Z" ccdWidth="5.27" /> <!-- 1/2.7" -->
+<camera model="OLYMPUS IMAGING CORP. X550,D545Z,C480Z" ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="OLYMPUS OPTICAL CO.,LTD C2040Z"   ccdWidth="6.40" /> <!-- 1/2 -->
+<camera model="OLYMPUS OPTICAL CO.,LTD C211Z"    ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="OLYMPUS OPTICAL CO.,LTD C2Z,D520Z,C220Z" ccdWidth="4.54" /> <!-- 1/3.2 -->
+<camera model="OLYMPUS OPTICAL CO.,LTD C3000Z"   ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="OLYMPUS OPTICAL CO.,LTD C300Z,D550Z" ccdWidth="5.4" />
+<camera model="OLYMPUS OPTICAL CO.,LTD C4100Z,C4000Z" ccdWidth="7.176" /> <!-- 1/1.8" -->
+<camera model="OLYMPUS OPTICAL CO.,LTD C750UZ"   ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="OLYMPUS OPTICAL CO.,LTD X-2,C-50Z" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="OLYMPUS SP550UZ" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="OLYMPUS X100,D540Z,C310Z"         ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Panasonic DMC-FX01"               ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-FX07"               ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-FX9"                ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-FZ20"               ccdWidth="5.760" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-FZ2"                ccdWidth="4.54" /> <!-- 1/3.2 -->
+<camera model="Panasonic DMC-FZ30"               ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Panasonic DMC-FZ50"               ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="Panasonic DMC-FZ5"                ccdWidth="5.760" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-FZ7"                ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-LC1"                ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="Panasonic DMC-LC33"               ccdWidth="5.760" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-LX1"                ccdWidth="8.50" /> <!-- 1/6.5 -->
+<camera model="Panasonic DMC-LZ2"                ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-TZ1"                ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-TZ3"                ccdWidth="5.68" /> <!-- 1/2.35 -->
+<camera model="Panasonic DMC-TZ4"                ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Panasonic DMC-FZ38"                ccdWidth="6.13" /> <!-- 1/2.33 -->
+<camera model="PENTAX Corporation  PENTAX *ist DL"   ccdWidth="23.5" />
+<camera model="PENTAX Corporation  PENTAX *ist DS2"   ccdWidth="23.5" />
+<camera model="PENTAX Corporation  PENTAX *ist DS"   ccdWidth="23.5" />
+<camera model="PENTAX Corporation  PENTAX K100D"      ccdWidth="23.5" />
+<camera model="PENTAX Corporation PENTAX Optio 450" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="PENTAX Corporation PENTAX Optio 550" ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="PENTAX Corporation PENTAX Optio E10" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="PENTAX Corporation PENTAX Optio S40" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="PENTAX Corporation  PENTAX Optio S4"   ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="PENTAX Corporation PENTAX Optio S50" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="PENTAX Corporation  PENTAX Optio S5i" ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="PENTAX Corporation  PENTAX Optio S5z" ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="PENTAX Corporation  PENTAX Optio SV"   ccdWidth="5.76" /> <!-- 1/2.5" -->
+<camera model="PENTAX Corporation PENTAX Optio WP"    ccdWidth="5.75" /> <!-- 1/2.5" -->
+<camera model="RICOH CaplioG3 modelM"            ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="RICOH       Caplio GX"      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="RICOH       Caplio R30"      ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="Samsung  Digimax 301"             ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="Samsung Techwin <Digimax i5, Samsung #1>" ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="SAMSUNG TECHWIN Pro 815"      ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="SONY DSC-F828"                    ccdWidth="8.80" /> <!-- 2/3 -->
+<camera model="SONY DSC-N12"                     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-P100"                    ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-P10"                     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-P12"                     ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-P150"                    ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-P200"                    ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-P52"                     ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="SONY DSC-P72"                     ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="SONY DSC-P73" ccdWidth="5.27" />
+<camera model="SONY DSC-P8"                      ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="SONY DSC-R1"                      ccdWidth="21.5" />
+<camera model="SONY DSC-S40"                     ccdWidth="5.27" /> <!-- 1/2.7 -->
+<camera model="SONY DSC-S600"                    ccdWidth="5.760" /> <!-- 1/2.5 -->
+<camera model="SONY DSC-T9"                      ccdWidth="7.18" />
+<camera model="SONY DSC-V1"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-W1"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-W30"                     ccdWidth="5.760" /> <!-- 1/2.5 -->
+<camera model="SONY DSC-W50"                     ccdWidth="5.75" /> <!-- 1/2.5 -->
+<camera model="SONY DSC-W5"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-W7"                      ccdWidth="7.176" /> <!-- 1/1.8 -->
+<camera model="SONY DSC-W80"                     ccdWidth="5.75" /> <!-- 1/2.5 -->
+</cameras>
