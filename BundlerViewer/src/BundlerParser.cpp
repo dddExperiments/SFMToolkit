@@ -218,8 +218,6 @@ const Mesh&	Bundler::importPly(const std::string& filepath)
 	{
 		std::getline(input, line);
 
-		//property list uchar int vertex_indices
-
 		if (line == "format binary_little_endian 1.0")
 			isBinaryFile = true;
 		else if (line == "format ascii 1.0")
@@ -253,7 +251,14 @@ const Mesh&	Bundler::importPly(const std::string& filepath)
 				nbTriangles = atoi(line.substr(lengthFace).c_str());
 			}
 		}
-	} while (line != "end_header"); //missing eof check...
+	} while (line != "end_header" || !input.eof());
+	
+	//something goes wrong: end_header not found
+	if (input.eof()) 
+	{
+		nbVertices  = 0;
+		nbTriangles = 0;
+	}
 
 	mesh.vertices.reserve(nbVertices);
 	mesh.triangles.reserve(nbTriangles);

@@ -37,7 +37,7 @@ typedef std::pair<unsigned int, unsigned int> Match;
 
 struct MatchInfo
 {
-	MatchInfo(int indexA, int indexB, std::vector<Match> matches)
+	MatchInfo(int indexA, int indexB, std::vector<Match>& matches)
 	{
 		this->indexA = indexA;
 		this->indexB = indexB;
@@ -51,7 +51,7 @@ struct MatchInfo
 
 struct FeatureInfo
 {
-	FeatureInfo(int width, int height, SiftKeyPoints points, SiftKeyDescriptors descriptors)
+	FeatureInfo(int width, int height, SiftKeyPoints& points, SiftKeyDescriptors& descriptors)
 	{
 		this->width  = width;
 		this->height = height;

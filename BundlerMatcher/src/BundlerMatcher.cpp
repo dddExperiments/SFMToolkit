@@ -23,8 +23,10 @@
 #include "BundlerMatcher.h"
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <sstream>
+#include <math.h>
 
 #define GL_RGB  0x1907
 #define GL_RGBA 0x1908
@@ -92,18 +94,25 @@ void BundlerMatcher::open(const std::string& inputFilename, const std::string& o
 	{
 		int percent = (int)(((i+1)*100.0f) / (1.0f*mFilenames.size()));		
 		int nbFeature = extractSiftFeature(i);
-		saveAsciiKeyFile(i);
-		if (mBinaryKeyFileWritingEnabled)
-			saveBinaryKeyFile(i);
 		clearScreen();
 		std::cout << "[Extracting Sift Feature : " << percent << "%] - ("<<i+1<<"/"<<mFilenames.size()<<", #"<< nbFeature <<" features)";
 	}
 	clearScreen();
-	std::cout << "[Sift Feature extracted]"<<std::endl;
-	saveVector();
+	std::cout << "[Sift Feature extracted]"<<std::endl;	
 
 	delete mSift;
 	mSift = NULL;
+
+	std::cout << "[Saving Sift Key files]";
+	for (unsigned int i=0; i<mFilenames.size(); ++i)
+	{
+		saveAsciiKeyFile(i);
+		if (mBinaryKeyFileWritingEnabled)
+			saveBinaryKeyFile(i);
+	}
+	saveVector();
+	clearScreen();
+	std::cout << "[Sift Key files saved]"<<std::endl;
 
 	//Sift Matching
 	int currentIteration = 0;
@@ -220,10 +229,37 @@ void BundlerMatcher::matchSiftFeature(int fileIndexA, int fileIndexB)
 }
 
 void BundlerMatcher::saveAsciiKeyFile(int fileIndex)
-{
+{	
 	std::stringstream filename;
 	filename << mFilenames[fileIndex].substr(0, mFilenames[fileIndex].size()-4) << ".key";
-	mSift->SaveSIFT(filename.str().c_str());
+
+	std::ofstream output(filename.str().c_str());
+	if (output.is_open())
+	{
+		output.flags(std::ios::fixed);
+
+		const FeatureInfo& info = mFeatureInfos[fileIndex];
+		
+		unsigned int nbFeature = (unsigned int) info.points.size();
+		const float* pd = &info.descriptors[0];
+		
+		output << nbFeature << " 128" <<std::endl;
+
+		for (unsigned int i=0; i<nbFeature; ++i)
+		{
+			//in y, x, scale, orientation order
+			output << std::setprecision(2) << info.points[i].y << " " << std::setprecision(2) << info.points[i].x << " " << std::setprecision(3) << info.points[i].s << " " << std::setprecision(3) <<  info.points[i].o << std::endl;
+			for (int k=0; k<128; ++k, ++pd)
+			{
+				output << ((unsigned int)floor(0.5+512.0f*(*pd)))<< " ";
+
+				if ((k+1)%20 == 0) 
+					output << std::endl;
+			}
+			output << std::endl;
+		}
+	}
+	output.close();
 }
 
 void BundlerMatcher::saveBinaryKeyFile(int fileIndex)
