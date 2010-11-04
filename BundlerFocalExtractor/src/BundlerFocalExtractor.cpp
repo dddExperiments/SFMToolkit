@@ -43,13 +43,15 @@ BundlerFocalExtractor::BundlerFocalExtractor(const std::string& inputPath, const
 	{
 		for (unsigned int i=0; i<mPictures.size(); ++i)
 		{
-			const std::string& filepath = mPictures[i];
+			const std::string& filename = mPictures[i];
+			std::stringstream filepath;
+			filepath << inputPath << filename;
 			
 			int width, height = 0;
-			Jpeg::getDimension(filepath, width, height);
-			float focal = getFocal(filepath, width, height);
-			outputList << filepath << std::endl;
-			outputFocalList << filepath << " 0 " << focal << std::endl;
+			Jpeg::getDimension(filepath.str(), width, height);
+			float focal = getFocal(filepath.str(), width, height);
+			outputList << filename << std::endl;
+			outputFocalList << filename << " 0 " << focal << std::endl;
 		}
 	}
 	outputList.close();
@@ -74,11 +76,7 @@ void BundlerFocalExtractor::open(const std::string& strPath)
 			boost::to_lower(extension);                           //jpg
 
 			if (extension == "jpg")
-			{
-				std::stringstream filepath;
-				filepath << path << filename;
-				mPictures.push_back(filepath.str());
-			}
+				mPictures.push_back(filename);
 		}
 	}
 }

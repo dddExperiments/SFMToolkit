@@ -169,7 +169,7 @@ void Parser::parsePictureListFile(const std::string& filepath)
 
 			if (line != "")
 			{
-				Ogre::StringUtil::splitFilename(line, mCameras[index].filename, tmp);
+				mCameras[index].filename = line;
 				index++;
 			}
 		}
@@ -251,7 +251,7 @@ const Mesh&	Bundler::importPly(const std::string& filepath)
 				nbTriangles = atoi(line.substr(lengthFace).c_str());
 			}
 		}
-	} while (line != "end_header" || !input.eof());
+	} while (line != "end_header");
 	
 	//something goes wrong: end_header not found
 	if (input.eof()) 

@@ -72,7 +72,7 @@ class BundlerMatcher
 		~BundlerMatcher();
 		 
 		//load list.txt and output gpu.matches.txt + one key file per pictures
-		void open(const std::string& inputFilename, const std::string& outMatchFilename);
+		void open(const std::string& inputPath, const std::string& inputFilename, const std::string& outMatchFilename);
 
 	protected:
 		
@@ -85,8 +85,7 @@ class BundlerMatcher
 		void matchSiftFeature(int fileIndexA, int fileIndexB);	
 		void saveMatches(const std::string& filename);
 
-		//Helpers		
-		std::vector<std::string> split(const std::string& str, char sep = ' ');
+		//Helpers
 		bool parseListFile(const std::string& filename);
 		void clearScreen();
 		void saveMatrix();
@@ -98,6 +97,7 @@ class BundlerMatcher
 		SiftMatchGPU*            mMatcher;
 		int                      mMatchBuffer[4096][2];
 		float                    mMatchThreshold;
+		std::string              mInputPath;
 
 		std::vector<std::string> mFilenames;    //N images
 		std::vector<FeatureInfo> mFeatureInfos; //N FeatureInfo

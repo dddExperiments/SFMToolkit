@@ -69,7 +69,7 @@ struct Bundler3DPoint
 class BundlerToTracking
 {
 	public:
-		void open(const std::string& bundlerFilename, const std::string& bundlerListJpeg); //open .out file from Bundler
+		void open(const std::string& inputPath, const std::string& bundlerFilename, const std::string& bundlerListJpeg); //open .out file from Bundler
 		void writeOutputFile(const std::string& binFilename, const std::string& txtFilename);
 
 	protected:		
@@ -82,6 +82,7 @@ class BundlerToTracking
 
 		std::vector<BundlerCamera>  mCameras;
 		std::vector<Bundler3DPoint> m3DPoints;
+		
 		std::vector<std::string> mFilenames;
-		std::vector<std::vector<BundlerFeature>> mFeatures;
+		std::vector<std::vector<BundlerFeature>> mFeatures;		
 };

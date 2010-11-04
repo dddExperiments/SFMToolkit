@@ -69,13 +69,15 @@ BundlerViewPoint::BundlerViewPoint(unsigned int indexImg, unsigned int indexFeat
 	this->indexFeature = indexFeature;
 }
 
-void BundlerToTracking::open(const std::string& bundlerFilename, const std::string& bundlerListJpeg)
+void BundlerToTracking::open(const std::string& inputPath, const std::string& bundlerFilename, const std::string& bundlerListJpeg)
 {
 	parseFile(bundlerFilename);
 	parseFileList(bundlerListJpeg);
 	for (unsigned int i=0; i<mFilenames.size(); ++i)
 	{
-		std::vector<BundlerFeature> features = getFeaturesBin(mFilenames[i]);
+		std::stringstream filepath;
+		filepath << inputPath << mFilenames[i];
+		std::vector<BundlerFeature> features = getFeaturesBin(filepath.str());
 		mFeatures.push_back(features);
 	}	
 }
@@ -95,7 +97,7 @@ void BundlerToTracking::writeTxtFile(const std::string& filename)
 		output << mCameras.size() << std::endl;
 		for (unsigned int i=0; i<mCameras.size(); ++i)
 		{
-			output << "#"<<mFilenames[i] << ".jpg"<<std::endl;
+			output << "#" << mFilenames[i] << std::endl;
 			BundlerCamera cam = mCameras[i];
 			output << cam << std::endl;
 			//would be nice to open jpeg and save width and height...
@@ -168,18 +170,7 @@ void BundlerToTracking::parseFileList(const std::string& filename)
 			std::string line;
 			std::getline(input, line);
 			if (line != "")
-			{
-				Ogre::String toSplit(line);
-				Ogre::StringVector tmp = Ogre::StringUtil::split(toSplit, " ");
-				if (tmp.size() > 0)
-				{
-					Ogre::String base, ext, path;
-					Ogre::StringUtil::splitFullFilename(tmp[0], base, ext, path);
-					std::stringstream name;
-					name << path << base;
-					mFilenames.push_back(name.str());
-				}
-			}
+				mFilenames.push_back(line);
 		}
 	}
 	input.close();
@@ -282,7 +273,7 @@ void BundlerToTracking::parseFile(const std::string& filename)
 std::vector<BundlerFeature> BundlerToTracking::getFeaturesBin(const std::string& baseFilename)
 {
 	std::stringstream filename;
-	filename << baseFilename << ".key.bin";	
+	filename << baseFilename.substr(0, baseFilename.size()-4) << ".key.bin";	
 	std::vector<BundlerFeature> features;
 
 	std::ifstream input;

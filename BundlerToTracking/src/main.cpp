@@ -26,15 +26,15 @@
 
 int main(int argc, char*argv[])
 {
-	if (argc != 5)
+	if (argc != 6)
 	{
-		std::cout << "Usage <bundle.out> <list.txt> <output.bin> <output.txt>" <<std::endl;
+		std::cout << "Usage <inputPath> <bundle.out> <list.txt> <output.bin> <output.txt>" <<std::endl;
 		return -1;
 	}
 
 	BundlerToTracking bundlerToTracking;
-	bundlerToTracking.open(std::string(argv[1]), std::string(argv[2]));
-	bundlerToTracking.writeOutputFile(std::string(argv[3]), std::string(argv[4]));
+	bundlerToTracking.open(std::string(argv[1]), std::string(argv[2]), std::string(argv[3]));
+	bundlerToTracking.writeOutputFile(std::string(argv[4]), std::string(argv[5]));
 
 	return 0;
 }

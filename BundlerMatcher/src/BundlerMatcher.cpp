@@ -75,8 +75,10 @@ BundlerMatcher::~BundlerMatcher()
 	ilShutDown();
 }
 
-void BundlerMatcher::open(const std::string& inputFilename, const std::string& outMatchFilename)
+void BundlerMatcher::open(const std::string& inputPath, const std::string& inputFilename, const std::string& outMatchFilename)
 {
+	mInputPath = inputPath;
+
 	if (!mIsInitialized)
 	{
 		std::cout << "Error : can not initialize opengl context for SiftGPU" <<std::endl;
@@ -102,24 +104,26 @@ void BundlerMatcher::open(const std::string& inputFilename, const std::string& o
 
 	delete mSift;
 	mSift = NULL;
-
-	std::cout << "[Saving Sift Key files]";
+	
 	for (unsigned int i=0; i<mFilenames.size(); ++i)
 	{
+		int percent = (int)(((i+1)*100.0f) / (1.0f*mFilenames.size()));	
 		saveAsciiKeyFile(i);
 		if (mBinaryKeyFileWritingEnabled)
 			saveBinaryKeyFile(i);
+		clearScreen();
+		std::cout << "[Saving Sift Key files: " << percent << "%] - ("<<i+1<<"/"<<mFilenames.size()<<")";
 	}
 	saveVector();
-	clearScreen();
-	std::cout << "[Sift Key files saved]"<<std::endl;
+	clearScreen();		
+	std::cout << "[Sift Key files saved]"<<std::endl;	
 
 	//Sift Matching
 	int currentIteration = 0;
 	int maxIterations    = (int) mFilenames.size()*((int) mFilenames.size()-1)/2; // Sum(1 -> n) = n(n-1)/2 ;-)
 
 	for (unsigned int i=0; i<mFilenames.size(); ++i)
-	{		
+	{
 		for (unsigned int j=i+1; j<mFilenames.size(); ++j)
 		{
 			clearScreen();
@@ -149,10 +153,7 @@ bool BundlerMatcher::parseListFile(const std::string& filename)
 			std::string line;
 			std::getline(input, line);
 			if (line != "")
-			{
-				std::vector<std::string> tmp = split(line, ' ');
-				mFilenames.push_back(tmp[0]);
-			}
+				mFilenames.push_back(line);
 		}
 	}
 	input.close();
@@ -162,7 +163,11 @@ bool BundlerMatcher::parseListFile(const std::string& filename)
 
 int BundlerMatcher::extractSiftFeature(int fileIndex)
 {
-	char* filename = &mFilenames[fileIndex][0];
+	std::stringstream filepath;
+	filepath << mInputPath << mFilenames[fileIndex];
+
+	std::string tmp = filepath.str();
+	char* filename = &tmp[0];
 	bool extracted = true;
 
 	unsigned int imgId = 0;
@@ -230,10 +235,10 @@ void BundlerMatcher::matchSiftFeature(int fileIndexA, int fileIndexB)
 
 void BundlerMatcher::saveAsciiKeyFile(int fileIndex)
 {	
-	std::stringstream filename;
-	filename << mFilenames[fileIndex].substr(0, mFilenames[fileIndex].size()-4) << ".key";
+	std::stringstream filepath;
+	filepath << mInputPath << mFilenames[fileIndex].substr(0, mFilenames[fileIndex].size()-4) << ".key";
 
-	std::ofstream output(filename.str().c_str());
+	std::ofstream output(filepath.str().c_str());
 	if (output.is_open())
 	{
 		output.flags(std::ios::fixed);
@@ -264,11 +269,11 @@ void BundlerMatcher::saveAsciiKeyFile(int fileIndex)
 
 void BundlerMatcher::saveBinaryKeyFile(int fileIndex)
 {
-	std::stringstream filename;
-	filename << mFilenames[fileIndex].substr(0, mFilenames[fileIndex].size()-4) << ".key.bin";
+	std::stringstream filepath;
+	filepath << mInputPath << mFilenames[fileIndex].substr(0, mFilenames[fileIndex].size()-4) << ".key.bin";
 
 	std::ofstream output;
-	output.open(filename.str().c_str(), std::ios::out | std::ios::binary);
+	output.open(filepath.str().c_str(), std::ios::out | std::ios::binary);
 	if (output.is_open())
 	{
 		int nbFeature = (int)mFeatureInfos[fileIndex].points.size();
@@ -356,25 +361,6 @@ void BundlerMatcher::saveVector()
 	std::ofstream output;
 	output.open("vector.txt");
 	for (unsigned int i=0; i<mFeatureInfos.size(); ++i)
-		output <<mFeatureInfos[i].points.size() << std::endl;
+		output << mFeatureInfos[i].points.size() << std::endl;
 	output.close();
-}
-
-std::vector<std::string> BundlerMatcher::split(const std::string& str, char sep)
-{
-	std::vector<std::string> results;
-	std::string tmp;
-	for (unsigned int i=0; i<str.size(); ++i)
-	{
-		if (str[i] == sep)
-		{
-			results.push_back(tmp);
-			tmp = "";
-		}
-		else
-			tmp += str.at(i);
-	}
-	results.push_back(tmp);
-
-	return results;
 }
