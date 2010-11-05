@@ -50,8 +50,12 @@ Info Reader::read(const std::string& jpegPath)
 		info.cameraMake  = exif.m_exifinfo->CameraMake;
 		info.cameraModel = exif.m_exifinfo->CameraModel;
 		info.focalLength = exif.m_exifinfo->FocalLength;
-		info.CCDWidth    = exif.m_exifinfo->CCDWidth;
+		info.CCDWidth    = exif.m_exifinfo->CCDWidth*2.54*10; //inches -> mm
 		info.isValid = true;
+
+		if (info.cameraMake == "")
+			info.isValid = false;
+
 		fclose(fp);
 	}
 

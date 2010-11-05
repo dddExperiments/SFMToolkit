@@ -93,7 +93,10 @@ float BundlerFocalExtractor::getFocal(const std::string& inputJpegPath, int widt
 
 		//if CCD width not found in database, try to find it in Exif info
 		if (ccdWidthInMM == -1)
+		{
+			std::cout << "Error: Missing CCD width in xml database for (" << exifInfo.cameraMake<< " " << exifInfo.cameraModel << ") in file " << inputJpegPath << std::endl;
 			ccdWidthInMM = exifInfo.CCDWidth;
+		}
 
 		float largerSizeInPixel = (float) std::max(width, height);
 
@@ -102,13 +105,13 @@ float BundlerFocalExtractor::getFocal(const std::string& inputJpegPath, int widt
 			return largerSizeInPixel * (focalInMM/ccdWidthInMM);	
 		else
 		{
-			std::cerr << inputJpegPath << " (" << exifInfo.cameraMake<< " " << exifInfo.cameraModel << ") CCD width not found" << std::endl;
+			std::cout << "Error: Missing CCD width in Exif for " << inputJpegPath << std::endl;
 			return 0;
 		}
 	}
 	else 
 	{
-		std::cerr << inputJpegPath << " has invalid Exif info" << std::endl;
+		std::cout << "Error: Invalid Exif in file " << inputJpegPath << std::endl;
 		return 0;
 	}
 }
