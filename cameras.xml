@@ -10,6 +10,7 @@
 <camera model="Canon Canon DIGITAL IXUS 55"      ccdWidth="5.76" /> <!-- 1/2.5 -->
 <camera model="Canon Canon DIGITAL IXUS 60"      ccdWidth="5.76" /> <!-- 1/2.5 -->
 <camera model="Canon Canon DIGITAL IXUS 65"      ccdWidth="5.76" /> <!-- 1/2.5 -->
+<camera model="Canon Canon DIGITAL IXUS 105"      ccdWidth="6.16" /> <!-- 1/2.3 -->
 <camera model="Canon Canon DIGITAL IXUS 700"      ccdWidth="7.176" /> <!-- 1/1.8 -->
 <camera model="Canon Canon DIGITAL IXUS 750"     ccdWidth="7.176" /> <!-- 1/1.8 -->
 <camera model="Canon Canon DIGITAL IXUS 800 IS"  ccdWidth="5.76" /> <!-- 1/2.5 -->
@@ -17,6 +18,7 @@
 <camera model="Canon Canon EOS 10D"              ccdWidth="22.7" />
 <camera model="Canon Canon EOS-1D Mark II"       ccdWidth="28.7" />
 <camera model="Canon Canon EOS-1Ds Mark II"      ccdWidth="35.95" />
+<camera model="Canon Canon EOS-1Ds Mark III"      ccdWidth="36.00" />
 <camera model="Canon Canon EOS  20D"              ccdWidth="22.5" />
 <camera model="Canon Canon EOS 20D"              ccdWidth="22.5" />
 <camera model="Canon Canon EOS 300D DIGITAL"     ccdWidth="22.66" />
@@ -25,9 +27,11 @@
 <camera model="Canon Canon EOS 400D DIGITAL"     ccdWidth="22.2" />
 <camera model="Canon Canon EOS 40D"              ccdWidth="22.2" />
 <camera model="Canon Canon EOS 5D"               ccdWidth="35.8" />
+<camera model="Canon Canon EOS 5D Mark II"      ccdWidth="35.95" />
 <camera model="Canon Canon EOS DIGITAL REBEL"     ccdWidth="22.66" />
 <camera model="Canon Canon EOS DIGITAL REBEL XT"  ccdWidth="22.2" />
 <camera model="Canon Canon EOS DIGITAL REBEL XTi" ccdWidth="22.2" />
+<camera model="Canon Canon EOS DIGITAL REBEL XSi" ccdWidth="22.2" />
 <camera model="Canon Canon EOS Kiss Digital"     ccdWidth="22.66" />
 <camera model="Canon Canon IXY DIGITAL 600"      ccdWidth="7.176" /> <!-- 1/1.8 -->
 <camera model="Canon Canon PowerShot A10"        ccdWidth="5.27" /> <!-- 1/2.7 -->
