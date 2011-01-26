@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="SiftGPU"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="$(SiftGPU)\include"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="SiftGPU.lib"
+		AdditionalLibraryDirectories="$(SiftGPU)\lib\$(PlatformName)"
+	/>
+	<UserMacro
+		Name="SiftGPU"
+		Value="$(SolutionDir)\Dependencies\SiftGPU\"
+	/>
+</VisualStudioPropertySheet>
