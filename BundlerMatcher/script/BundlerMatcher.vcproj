@@ -23,6 +23,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
+			InheritedPropertySheets="..\..\Dependencies\SiftGPU\script\SiftGPU.vsprops"
 			CharacterSet="2"
 			>
 			<Tool
@@ -95,6 +96,7 @@
 			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
+			InheritedPropertySheets="..\..\Dependencies\SiftGPU\script\SiftGPU.vsprops"
 			CharacterSet="2"
 			>
 			<Tool
@@ -135,7 +137,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="DevIL64.lib"
+				AdditionalDependencies="DevIL.lib"
 				AdditionalLibraryDirectories="&quot;$(SolutionDir)\Dependencies\SiftGPU\lib\&quot;"
 				GenerateDebugInformation="true"
 				TargetMachine="17"
@@ -168,6 +170,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
+			InheritedPropertySheets="..\..\Dependencies\SiftGPU\script\SiftGPU.vsprops"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
 			>
@@ -244,6 +247,7 @@
 			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
+			InheritedPropertySheets="..\..\Dependencies\SiftGPU\script\SiftGPU.vsprops"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
 			>
@@ -286,7 +290,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="DevIL64.lib"
+				AdditionalDependencies="DevIL.lib"
 				AdditionalLibraryDirectories="&quot;$(SolutionDir)\Dependencies\SiftGPU\lib\&quot;"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"

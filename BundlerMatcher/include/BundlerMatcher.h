@@ -95,7 +95,7 @@ class BundlerMatcher
 		bool                     mBinaryKeyFileWritingEnabled;
 		SiftGPU*                 mSift;
 		SiftMatchGPU*            mMatcher;
-		int                      mMatchBuffer[4096][2];
+		//int                      mMatchBuffer[4096][2];
 		float                    mMatchThreshold;
 		std::string              mInputPath;
 

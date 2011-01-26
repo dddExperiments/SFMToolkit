@@ -65,8 +65,6 @@ BundlerMatcher::BundlerMatcher(float matchThreshold, int firstOctave, bool binar
 		mSift->AllocatePyramid(1600, 1600);
 
 	mMatcher = new SiftMatchGPU(4096);
-	if (mMatcher->VerifyContextGL() == 0)
-		mIsInitialized = false;	
 }
 
 BundlerMatcher::~BundlerMatcher()
@@ -102,9 +100,6 @@ void BundlerMatcher::open(const std::string& inputPath, const std::string& input
 	clearScreen();
 	std::cout << "[Sift Feature extracted]"<<std::endl;	
 
-	delete mSift;
-	mSift = NULL;
-	
 	for (unsigned int i=0; i<mFilenames.size(); ++i)
 	{
 		int percent = (int)(((i+1)*100.0f) / (1.0f*mFilenames.size()));	
@@ -117,6 +112,11 @@ void BundlerMatcher::open(const std::string& inputPath, const std::string& input
 	saveVector();
 	clearScreen();		
 	std::cout << "[Sift Key files saved]"<<std::endl;	
+
+	delete mSift;
+	mSift = NULL;
+
+	mMatcher->VerifyContextGL();
 
 	//Sift Matching
 	int currentIteration = 0;
@@ -173,6 +173,7 @@ int BundlerMatcher::extractSiftFeature(int fileIndex)
 	unsigned int imgId = 0;
 	ilGenImages(1, &imgId);
 	ilBindImage(imgId); 
+	int nbFeatureFound = -1;
 
 	if(ilLoadImage(filename))
 	{
@@ -192,7 +193,7 @@ int BundlerMatcher::extractSiftFeature(int fileIndex)
 			//Save Feature in RAM
 			mFeatureInfos.push_back(FeatureInfo(w, h, keys, descriptors));
 
-			return num;
+			nbFeatureFound = num;
 		}
 		else
 		{
@@ -211,7 +212,7 @@ int BundlerMatcher::extractSiftFeature(int fileIndex)
 		std::cout << "Error while reading : " <<filename <<std::endl;
 	}
 
-	return -1;
+	return nbFeatureFound;
 }
 
 void BundlerMatcher::matchSiftFeature(int fileIndexA, int fileIndexB)
@@ -224,13 +225,16 @@ void BundlerMatcher::matchSiftFeature(int fileIndexA, int fileIndexB)
 
 	mMatcher->SetDescriptors(0, (int) pointsA.size(), &descriptorsA[0]);
 	mMatcher->SetDescriptors(1, (int) pointsB.size(), &descriptorsB[0]);
-	int nbMatch = mMatcher->GetSiftMatch(4096, mMatchBuffer, mMatchThreshold);
+	
+	int (*matchBuffer)[2] = new int[pointsA.size()][2];
+	int nbMatch = mMatcher->GetSiftMatch((int)pointsA.size(), matchBuffer, mMatchThreshold);
 
 	//Save Match in RAM
 	std::vector<Match> matches(nbMatch);
 	for (int i=0; i<nbMatch; ++i)
-		matches[i] = Match(mMatchBuffer[i][0], mMatchBuffer[i][1]);
+		matches[i] = Match(matchBuffer[i][0], matchBuffer[i][1]);
 	mMatchInfos.push_back(MatchInfo(fileIndexA, fileIndexB, matches));
+	delete[] matchBuffer;
 }
 
 void BundlerMatcher::saveAsciiKeyFile(int fileIndex)
