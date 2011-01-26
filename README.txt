@@ -18,8 +18,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-Structure from motion toolkit:
-------------------------------
+Structure from motion toolkit [http://www.visual-experiments.com/demos/sfmtoolkit/]:
+------------------------------------------------------------------------------------
 
 - BundlerFocalExtractor : extract CCD width from Exif using XML database
 - BundlerMatcher : extract and match feature using SiftGPU
@@ -32,7 +32,7 @@ Structure from motion toolkit:
 - BundlerToPly : generate ply file from Bundler output (indexes of 3D points are store in normals) [beta]
 - BundlerCleaner : removed 3D points from the tracking file according to ply file [beta]
 
-The full package is available at http://www.visual-experiments.com/blog/?sdmon=downloads/SFMToolkit1.zip
+The full package is available at http://www.visual-experiments.com/blog/?sdmon=downloads/SFMToolkit2.zip
 Created by Henri Astre http://www.visual-experiments.com released under MIT license.
 
 Dependencies used:

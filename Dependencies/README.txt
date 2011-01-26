@@ -1,14 +1,6 @@
 Dependencies needed :
 ---------------------
 
-SiftGPU v360:
--------------
-
-- Download and extract SiftGPU from http://www.cs.unc.edu/~ccwu/siftgpu/
-
-- Resulting folder after extraction:
-	$(SolutionDir)\Dependencies\SiftGPU\vc\SiftGPU\SiftGPU.vcproj
-
 Ogre3D v1.7.x:
 --------------
 
