@@ -34,9 +34,11 @@
 
 #include <IL/il.h>
 
-BundlerMatcher::BundlerMatcher(float matchThreshold, int firstOctave, bool binaryWritingEnabled)
+BundlerMatcher::BundlerMatcher(float matchThreshold, int firstOctave, bool binaryWritingEnabled, bool sequenceMatching, int sequenceMatchingLength)
 {
 	mBinaryKeyFileWritingEnabled = binaryWritingEnabled;
+	mSequenceMatchingEnabled     = sequenceMatching;
+	mSequenceMatchingLength      = sequenceMatchingLength;
 
 	//DevIL init
 	ilInit();
@@ -120,19 +122,47 @@ void BundlerMatcher::open(const std::string& inputPath, const std::string& input
 
 	//Sift Matching
 	int currentIteration = 0;
-	int maxIterations    = (int) mFilenames.size()*((int) mFilenames.size()-1)/2; // Sum(1 -> n) = n(n-1)/2 ;-)
 
-	for (unsigned int i=0; i<mFilenames.size(); ++i)
+	if (mSequenceMatchingEnabled) //sequence matching (video input)
 	{
-		for (unsigned int j=i+1; j<mFilenames.size(); ++j)
+		std::cout << "[Sequence matching enabled: length " << mSequenceMatchingLength << "]" << std::endl;
+		int maxIterations = (int) (mFilenames.size()-mSequenceMatchingLength)*mSequenceMatchingLength + factorial(mSequenceMatchingLength-1); // (N-m).m + (m-1)!
+		for (unsigned int i=0; i<mFilenames.size()-1; ++i)
 		{
-			clearScreen();
-			int percent = (int) (currentIteration*100.0f / maxIterations*1.0f);
-			std::cout << "[Matching Sift Feature : " << percent << "%] - (" << i << "/" << j << ")";
-			matchSiftFeature(i, j);
-			currentIteration++;
+			for (int j=1; j<=mSequenceMatchingLength; ++j)
+			{
+				int indexA = i;
+				int indexB = i+j;
+
+				if (indexB >= mFilenames.size())
+					continue;
+				else
+				{
+					clearScreen();
+					int percent = (int) (currentIteration*100.0f / maxIterations*1.0f);
+					std::cout << "[Matching Sift Feature : " << percent << "%] - (" << indexA << "/" << indexB << ")";
+					matchSiftFeature(indexA, indexB);
+					currentIteration++;
+				}
+			}
 		}
 	}
+	else //classic quadratic matching
+	{
+		int maxIterations = (int) mFilenames.size()*((int) mFilenames.size()-1)/2; // Sum(1 -> n) = n(n-1)/2
+		for (unsigned int i=0; i<mFilenames.size(); ++i)
+		{
+			for (unsigned int j=i+1; j<mFilenames.size(); ++j)
+			{
+				clearScreen();
+				int percent = (int) (currentIteration*100.0f / maxIterations*1.0f);
+				std::cout << "[Matching Sift Feature : " << percent << "%] - (" << i << "/" << j << ")";
+				matchSiftFeature(i, j);
+				currentIteration++;
+			}
+		}
+	}
+
 	clearScreen();
 	std::cout << "[Sift Feature matched]"<<std::endl;
 
@@ -367,4 +397,13 @@ void BundlerMatcher::saveVector()
 	for (unsigned int i=0; i<mFeatureInfos.size(); ++i)
 		output << mFeatureInfos[i].points.size() << std::endl;
 	output.close();
+}
+
+int BundlerMatcher::factorial(int value)
+{
+	int factorial = 1;
+	for (int i=1; i<=value; ++i)
+		factorial *= i;
+
+	return factorial;
 }

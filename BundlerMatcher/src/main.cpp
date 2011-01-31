@@ -30,22 +30,38 @@ int main(int argc, char* argv[])
 		std::cout << "<matchThreshold> : 0.0 means few match and 1.0 many match (float)" <<std::endl;
 		std::cout << "<firstOctave>: specify on which octave start sampling (int)" <<std::endl;
 		std::cout << "<firstOctave>: low value (0) means many features and high value (2) means less features" << std::endl;		
+		std::cout << "Optional feature:" << std::endl;
+		std::cout << "	- bin: generate binary files (needed for Augmented Reality tracking)" << std::endl;
+		std::cout << "	- sequence NUMBER: matching optimized for video sequence" << std::endl;
+		std::cout << "		-> example: sequence 3 (will match image N with N+1,N+2,N+3)" <<std::endl;
 		std::cout << "Example: " << argv[0] << " your_folder/ list.txt gpu.matches.txt 0.8 1" << std::endl;
 
 		return -1;
 	}
 
-	bool binnaryWritingEnabled = false;
+	bool binnaryWritingEnabled  = false;
+	bool sequenceMatching       = false;
+	int  sequenceMatchingLength = 0;
 
 	for (int i=1; i<argc; ++i)
 	{
 		std::string current(argv[i]);
 		if (current == "bin")
 			binnaryWritingEnabled = true;
+		else if (current == "sequence")
+		{
+			if (i+1<argc)
+			{				
+				sequenceMatchingLength = atoi(argv[i+1]);
+				if (sequenceMatchingLength > 0)
+					sequenceMatching = true;
+				i++;
+			}
+		}
 	}
 
-	BundlerMatcher matcher((float) atof(argv[4]), atoi(argv[5]), binnaryWritingEnabled);
+	BundlerMatcher matcher((float) atof(argv[4]), atoi(argv[5]), binnaryWritingEnabled, sequenceMatching, sequenceMatchingLength);
 	matcher.open(std::string(argv[1]), std::string(argv[2]), std::string(argv[3]));
-
+	
 	return 0;
 }
