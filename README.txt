@@ -32,7 +32,7 @@ Structure from motion toolkit [http://www.visual-experiments.com/demos/sfmtoolki
 - BundlerToPly : generate ply file from Bundler output (indexes of 3D points are store in normals) [beta]
 - BundlerCleaner : removed 3D points from the tracking file according to ply file [beta]
 
-The full package is available at http://www.visual-experiments.com/blog/?sdmon=downloads/SFMToolkit2.zip
+The full package is available at http://www.visual-experiments.com/blog/?sdmon=downloads/SFMToolkit3.zip
 Created by Henri Astre http://www.visual-experiments.com released under MIT license.
 
 Dependencies used:
