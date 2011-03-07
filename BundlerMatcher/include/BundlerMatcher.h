@@ -90,9 +90,7 @@ class BundlerMatcher
 		void clearScreen();
 		void saveMatrix();
 		void saveVector();
-public:
-		static int factorial(int value);
-	
+public:	
 		bool                     mIsInitialized;
 		bool                     mBinaryKeyFileWritingEnabled;
 		bool                     mSequenceMatchingEnabled;

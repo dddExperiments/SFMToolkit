@@ -126,7 +126,7 @@ void BundlerMatcher::open(const std::string& inputPath, const std::string& input
 	if (mSequenceMatchingEnabled) //sequence matching (video input)
 	{
 		std::cout << "[Sequence matching enabled: length " << mSequenceMatchingLength << "]" << std::endl;
-		int maxIterations = (int) (mFilenames.size()-mSequenceMatchingLength)*mSequenceMatchingLength + factorial(mSequenceMatchingLength-1); // (N-m).m + (m-1)!
+		int maxIterations = (int) (mFilenames.size()-mSequenceMatchingLength)*mSequenceMatchingLength + mSequenceMatchingLength*(mSequenceMatchingLength-1)/2; // (N-m).m + m(m-1)/2
 		for (unsigned int i=0; i<mFilenames.size()-1; ++i)
 		{
 			for (int j=1; j<=mSequenceMatchingLength; ++j)
@@ -397,13 +397,4 @@ void BundlerMatcher::saveVector()
 	for (unsigned int i=0; i<mFeatureInfos.size(); ++i)
 		output << mFeatureInfos[i].points.size() << std::endl;
 	output.close();
-}
-
-int BundlerMatcher::factorial(int value)
-{
-	int factorial = 1;
-	for (int i=1; i<=value; ++i)
-		factorial *= i;
-
-	return factorial;
 }
